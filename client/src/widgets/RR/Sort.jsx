@@ -4,16 +4,6 @@ import PostAPIInteraction from "../PostAPIInteraction.jsx";
 
 function Sort ({currentProduct, reviews, setReviews, metaData}) {
   const [value, setValue] = useState("relevant");
-  const [reviewsNum, setReviewsNum] = useState(0);
-
-useEffect(() => {
-
-  if(metaData) {
-    const recommended = metaData.recommended
-    const total = Number(recommended.false) + Number(recommended.true);
-    setReviewsNum(total);
-  }
-}, [metaData])
 
   const handleChange = (e) => {
     let newValue = e.target.value
@@ -32,7 +22,7 @@ useEffect(() => {
       marginBottom: "10px"
     }}
     >
-      <label htmlFor="sortSelect">{`${reviewsNum} reviews sorted by:`}</label>
+      <label htmlFor="sortSelect">{`${reviews.length} reviews sorted by:`}</label>
       <select id="sortSelect" value={value} onChange={handleChange}>
         <option value="relevant">Relevance</option>
         <option value="newest">Newest</option>
