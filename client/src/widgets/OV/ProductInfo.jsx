@@ -65,7 +65,7 @@ function ProductInfo({currentProduct, currentStyle, checkIfProductChangedArr, ch
           <p className="product-category">{currentProduct.category}</p>
           <h3 className="product-name">{currentProduct.name}</h3>
           <p>{currentProduct.slogan}</p>
-          {hasSale ? <div  style={{'display': 'flex', 'marginBottom': '1vh'}}> <strike>{currentStyle.original_price}</strike> <div className="product-price-discounted">{currentPrice}</div> </div> : <div className="product-price">{currentPrice}</div>}
+          {hasSale ? <div  style={{'display': 'flex', 'marginBottom': '1vh'}}> <strike>${currentStyle.original_price}</strike> <div className="product-price-discounted">${currentPrice}</div> </div> : <div className="product-price">${currentPrice}</div>}
           <div className="product-description">{currentProduct.description}</div>
         </div>
       )

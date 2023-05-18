@@ -22,17 +22,27 @@ const Outfit = ({products, currentProduct, setCurrentProduct}) => {
     return (
       <div data-testid="normalRender" style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', width: '50%', height: 'auto'}}>
         <br></br>
-        <div style={{fontSize: 30}}>Related Products</div>
+        <div style={{fontSize: 30, fontFamily: 'Orbitron, sans-serif'}}>Related Products</div>
         <br></br>
         <RelatedProductsCarousel currentProduct={currentProduct} relatedProducts={relatedProducts} setCurrentProduct={setCurrentProduct}/>
         <br></br>
-        <div style={{fontSize: 30}}>Your Outfit</div>
+        <div style={{fontSize: 30, fontFamily: 'Orbitron, sans-serif'}}>Your Outfit</div>
         <br></br>
         <YourOutfits currentProduct={currentProduct}/>
       </div>
     )
   } else {
-    return (<div data-testid="loadRender" style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', width: '75%', height: 'auto'}}>Loading...</div>)
+    return (
+    <div data-testid="loadRender" style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', width: '50%', height: 'auto'}}>
+      <br></br>
+      <div style={{fontSize: 30, fontFamily: 'Orbitron, sans-serif'}}>Related Products</div>
+      <br></br>
+      <div style={{fontSize: 30, fontFamily: 'Orbitron, sans-serif'}}>No Related Products...</div>
+      <br></br>
+      <div style={{fontSize: 30, fontFamily: 'Orbitron, sans-serif'}}>Your Outfit</div>
+      <br></br>
+      <YourOutfits currentProduct={currentProduct}/>
+    </div>)
   }
 };
 

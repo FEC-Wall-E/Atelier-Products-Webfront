@@ -14,7 +14,7 @@ function Store () {
   useEffect(() => {axios.get('/listProducts')
   .then((res) => {
     setProducts(res.data);
-    setCurrentProduct(res.data[4]);
+    setCurrentProduct(res.data[7]);
   })
 }, []);
 

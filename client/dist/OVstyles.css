@@ -1,8 +1,12 @@
 .main-overview{
+  font-family: Arial;
   display: flex;
   padding: 2vh;
   border-bottom: 2px solid black;
   width: 100%;
+}
+.next-product-btn:hover{
+  background-color: rgb(255, 255, 255);
 }
 .product-info{
   display: flex;
