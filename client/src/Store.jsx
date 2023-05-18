@@ -33,23 +33,41 @@ function Store () {
 
   return(
     <div style={{background: background, color: color, border: "1px solid black"}}>
-    <div style={{display: "flex", justifyContent: "space-between"}}>
-      <div style={{display: "flex"}}>
-        <img style={{width: '25wh', height: '25vh', marginLeft: '10px'}} src={Logo} />
-        <div style={{
-          fontSize: '5vh',
-          fontFamily: 'Orbitron, sans-serif',
-          display: "flex",
-          alignItems: "center",
-          color: "white",
-          marginTop: "10px",
-          textShadow: "3px 2px 2px #808080"
-        }}>MART
+      <div style={{
+        display: "flex",
+        flexDirection: "column",
+        background: "lightblue",
+        height: '25vh',
+        borderBottom: "0.5px solid black"
+      }}>
+        <div style={{display: "flex", justifyContent: "space-between", height: "18vh", marginLeft: "8%"}}>
+          <div style={{display: "flex"}}>
+            <img style={{width: '28wh', height: '28vh'}} src={Logo} />
+            <div style={{
+              fontSize: '5vh',
+              fontFamily: 'Orbitron, sans-serif',
+              display: "flex",
+              alignItems: "center",
+              color: "white",
+              marginTop: "25%",
+              textShadow: "3px 2px 2px #808080"
+            }}>MART
+            </div>
+          </div>
+          <button style={{height: "20px", margin: "10px"}} onClick={changeMode}>{modeName}</button>
         </div>
+        <div
+        style={{
+          marginTop: "0px",
+          marginLeft: "1%",
+          fontSize: "small",
+          fontFamily: "Orbitron, sans-serif",
+          color: "white",
+          textShadow: "3px 2px 2px #808080",
+          marginLeft: "8%"
+        }}
+        >"W"! "W" is for WALL-E, your very best friend."</div>
       </div>
-      <button style={{height: "20px"}} onClick={changeMode}>{modeName}</button>
-      </div>
-
       <Product products={products} currentProduct={currentProduct} setCurrentProduct={setCurrentProduct}/>
     </div>
   );
