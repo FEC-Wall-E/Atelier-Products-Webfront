@@ -118,13 +118,15 @@ function ReviewTile ({review, reviews}) {
         />
 
         <div>
-          <div style={{fontSize: "small"}}>
+          <div style={{fontSize: "small", fontFamily: "Arial, Helvetica, sans-serif"}}>
           {formatDate(review.date)}
           </div>
           <div
           style={{fontSize: "small",
           display: "flex",
-          justifyContent: "right"}}>
+          justifyContent: "right",
+          fontFamily: "Arial, Helvetica, sans-serif"
+          }}>
             {isVerifiedUser(review.reviewer_name) ? `✓ ${review.reviewer_name}`: review.reviewer_name}
           </div>
         </div>
@@ -132,13 +134,14 @@ function ReviewTile ({review, reviews}) {
       </div>
 
       <div style={{marginBottom: "10px"}}>
-        <p style={{"fontWeight": "bold", marginTop: "0"}}>
+        <p style={{"fontWeight": "bold", marginTop: "0", fontFamily: "Arial, Helvetica, sans-serif"}}>
         {review.summary}
         </p>
 
         <p
         style={{
-          margin: "0"
+          margin: "0",
+          fontFamily: "Arial, Helvetica, sans-serif"
         }}
         >
           {showMore ? body: `${body.substring(0, 250)}`}
